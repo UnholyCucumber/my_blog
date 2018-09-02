@@ -1,0 +1,8 @@
+<h2><%= @post.title %></h2>
+<p><%= sanitize @post.body %></p>
+<hr>
+
+
+<hr>
+<%= render 'comments/comments' %>
+<%= render 'comments/form' %>
