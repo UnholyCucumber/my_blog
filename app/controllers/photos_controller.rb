@@ -1,5 +1,6 @@
 class PhotosController < ApplicationController
   before_action :set_photo, only: [:show, :edit, :update, :destroy]
+  http_basic_authenticate_with name: "Andy", password:"Money1998!", except: [:index, :show]
 
   # GET /photos
   # GET /photos.json
