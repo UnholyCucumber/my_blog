@@ -2,7 +2,7 @@
 <% @posts.each do |post| %>
   <div class="well">
     <h3 style="color: #696969;"><%= post.title %></h3>
-    <p><%= post.body.html_safe %></p>
+    <p><%= sanitize post.body.truncate(358) %></p>
     <%= link_to "Read More", post_path(post), :class => 'btn btn-default' %>
   </div>
 <% end %>
